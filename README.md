@@ -30,14 +30,14 @@ cd flask-docker-ec2
 
 
 2. Build Docker image:
-
+``` bash
   docker build -t flask-app .
-
+```
 
 3. Run container locally:
-
+``` bash
   docker run -d -p 5000:5000 flask-app
-
+```
 
 4. Open http://localhost:5000 in your browser to see the app.
 
@@ -48,33 +48,33 @@ cd flask-docker-ec2
 2. Allow inbound traffic for SSH (22), HTTP (80), and TCP 5000.
 
 3. SSH into EC2:
-
+``` bash
   ssh -i flask-key.pem ec2-user@EC2_PUBLIC_IP
-
+```
 
 4. Install Docker and Git:
-
-  sudo yum update -y
-  sudo yum install docker git -y
-  sudo systemctl start docker
-  sudo usermod -aG docker ec2-user
-
+``` bash
+  sudo yum update -y <br>
+  sudo yum install docker git -y <br>
+  sudo systemctl start docker <br>
+  sudo usermod -aG docker ec2-user <br>
+```
 
 5. Clone repository:
-
+``` bash
   git clone https://github.com/Shriniwas-Mudliyar/flask-docker-ec2.git
   cd flask-docker-ec2
-
+```
 
 6. Build Docker image:
-
+``` bash
   docker build -t flask-app .
-
+```
 
 7. Run container:
-
+``` bash
   docker run -d -p 80:5000 flask-app
-
+```
 
 8. Open http:// in your browser to access the live app.
 
